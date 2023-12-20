@@ -49,7 +49,6 @@ else:
 diff_percent = round((difference / float(yesterday_closing_price)) * 100)
 print(diff_percent)
 
-
 #If difference percentage is greater than 5 then print News.
 if abs(diff_percent) >= 1:
     news_params = {
@@ -63,7 +62,6 @@ if abs(diff_percent) >= 1:
     #Use Python slice operator to create a list that contains the first 3 articles. 
     three_articles = articles[:3]
     print(three_articles)
-
 
     #Create a new list of the first 3 article's headline and description using list comprehension.
     formatted_articles = [f"{STOCK_NAME}: {up_down} {diff_percent}%\nHeadline: {article['title']}. \nBrief: {article['description']}" for article in three_articles]
